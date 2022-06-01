@@ -1,0 +1,77 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://soapws.pwrona.sri.pja.edu/products"
+           targetNamespace="http://soapws.pwrona.sri.pja.edu/products"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="productDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="price" type="xs:float"/>
+            <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getProductsRequest">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="products" type="tns:productDto" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReportRequest">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getReportResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="products" type="tns:productDto" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+<!--    <xs:element name="getProductByIdRequest">-->
+<!--        <xs:complexType>-->
+<!--            <xs:sequence>-->
+<!--                <xs:element name="productId" type="xs:decimal"/>-->
+<!--            </xs:sequence>-->
+<!--        </xs:complexType>-->
+<!--    </xs:element>-->
+
+<!--    <xs:element name="getProductByIdResponse">-->
+<!--        <xs:complexType>-->
+<!--            <xs:sequence>-->
+<!--                <xs:element name="product" type="tns:productDto" minOccurs="0" maxOccurs="1"/>-->
+<!--            </xs:sequence>-->
+<!--        </xs:complexType>-->
+<!--    </xs:element>-->
+
+<!--    <xs:element name="addProductRequest">-->
+<!--        <xs:complexType>-->
+<!--            <xs:sequence>-->
+<!--                <xs:element name="product" type="tns:productDto"/>-->
+<!--            </xs:sequence>-->
+<!--        </xs:complexType>-->
+<!--    </xs:element>-->
+
+<!--    <xs:element name="addProductResponse">-->
+<!--      <xs:complexType>-->
+<!--          <xs:sequence>-->
+<!--              <xs:element name="productId" type="xs:decimal"/>-->
+<!--          </xs:sequence>-->
+<!--      </xs:complexType>-->
+<!--    </xs:element>-->
+
+</xs:schema>
+
+
